@@ -5,12 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo app (with JS)</title>
   <link rel="stylesheet" href="style.css">
-
+  <title>Orgly</title>
 </head>
 
 <body>
+
+  <header>
+    <h1>Orgly</h1>
+    <p>Simply organized</p>
+    <button class="clear-btn">Clear</button>
+  </header>
+
+  <div class="category-wrapper">
+    <!-- The master category -->
+    <div class="master-input-container">
+      <input class="master-input-field" type="text" placeholder="New category">
+      <button class="master-input-btn">+</button>
+    </div>
+  </div>
+
+  <!-- This div will hold all of the todo-wrappers created dynamically -->
+  <div class="todo-master-wrapper">
+  </div>
+
+  <div class="footer-wrapper">
+    <footer>
+      <p>- &nbsp; Jonis &nbsp; - &nbsp; 2023 &nbsp; -</p>
+    </footer>
+  </div>
 
   <div>
     <h2>GitHub Shortcuts:</h2>
@@ -36,37 +59,7 @@
     </p>
   </div>
 
-
-
-  <script>
-
-
-    let todos = ['food', 'work', 'more food'];
-    todos.push('another piece of food');
-
-    todos.forEach(function (todoTitle) {
-      let element = document.createElement('div');
-      element.innerText = todoTitle;
-      document.body.appendChild(element);
-    })
-
-    const myArray = ['the 0', 'well nr 1', 'and nr 2'];
-
-    const upper = [];
-
-    myArray.forEach(element => {
-      upper.push(element.toUpperCase())
-    })
-
-    function toUpper(element) {
-      upper.push(element.toUpperCase())
-      console.log(oldUpper);
-    }
-
-    toUpper(myArray)
-    console.log(upper);
-
-  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
