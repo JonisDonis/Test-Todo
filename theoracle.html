@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>the Oracle</title>
+</head>
+<body>
+
+
+
+<!--APP DIV-->
+  <div class="mainDiv">
+    <div class="instructions">
+      <p>
+        Ask the oracle simple YES / NO questions.<br>
+        A fair warning, maybe think twice about asking question that you may not be ready to have answered. <br> Somethimes ignorance can be a bliss. 
+      </p>
+    </div>
+    <div class="inputs">
+      <input type="text" id="userInput" placeholder="Ask the Oracle">
+      
+      <button onclick="oracleAnswer();">Speak</button>;
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+
+// :::ORACLE:::
+// THE ARRAY
+  const myArray = ['ja du... vem vet', 'javisst', 'helt klart!', 'mja', 'kanske', 'inte så troligt eller?', 'inte en chans', 'tänk inte för mycket på sånt', 'avbryt, det blir löjligt.', 'JA', 'NEJ'];
+
+//VARIABLES
+  let min = 0
+  let max = myArray.length
+  console.log('array length = ' + max);
+  let randomize = Math.floor(Math.random() * (max - min) + min) ;
+  console.log(randomize);
+  let randomAnswer = myArray[randomize];
+  console.log(randomAnswer);
+
+//FUNCTIONS
+  function oracleAnswer(userInput) {
+    let oracleAnswer = document.createElement('div');
+    let textbox = document.getElementById(userInput);
+    let title = textbox.value;
+    oracleAnswer.innerText = title + '\n\n -' + randomAnswer;
+    document.body.appendChild(oracleAnswer);
+  }
+  // function oracleAnswer(userInput) {
+  //   let oracleAnswer = document.createElement('div');
+  //   oracleAnswer.innerText = document.getElementById('userInput') + '\n\n -' + randomAnswer;
+  //   document.body.appendChild(oracleAnswer);
+  // }
+  
+
+  </script>
+</body>
+</html>
