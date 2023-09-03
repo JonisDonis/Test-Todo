@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,16 @@
   <title>Todo app (with JS)</title>
 
 </head>
+
 <body>
-  <input id="todo-title" type="text" placeholder="ToDodidada"/>
+  <input id="todo-title" type="text" placeholder="ToDodidada" />
   <button onclick="addTodo()">Press me baby!</button>
 
 
 
-
-
-
+  <div>
+    <p>this is a change</p>
+  </div>
 
 
 
@@ -31,24 +33,25 @@
       let element = document.createElement('div');
       element.innerText = todoTitle;
       document.body.appendChild(element);
-})
+    })
 
-const myArray = ['the 0', 'well nr 1', 'and nr 2'];
+    const myArray = ['the 0', 'well nr 1', 'and nr 2'];
 
-const upper = [];
+    const upper = [];
 
-myArray.forEach(element => {
-  upper.push(element.toUpperCase())
-})
+    myArray.forEach(element => {
+      upper.push(element.toUpperCase())
+    })
 
-function toUpper(element) {
-  upper.push(element.toUpperCase())
-  console.log(oldUpper);
-}
+    function toUpper(element) {
+      upper.push(element.toUpperCase())
+      console.log(oldUpper);
+    }
 
-toUpper(myArray)
-console.log(upper);
+    toUpper(myArray)
+    console.log(upper);
 
-</script>
+  </script>
 </body>
+
 </html>
